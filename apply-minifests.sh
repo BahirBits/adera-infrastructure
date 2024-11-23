@@ -28,13 +28,13 @@ apply_manifest() {
 }
 
 MANIFESTS=(
-  "mlflow-service-account.yaml"
-  "mlflow-configmap.yaml"
-  "mlflow-db-secret.yaml"
-  "mlflow-pv-pvc.yaml"
-  "mlflow-rbac.yaml"
-  "mlflow-deployment.yaml"
-  "mlflow-service.yaml"
+  "mlflow-deployment/mlflow-deploymentmlflow-service-account.yaml"
+  "mlflow-deployment/mlflow-configmap.yaml"
+  "mlflow-deployment/mlflow-db-secret.yaml"
+  "mlflow-deployment/mlflow-pv-pvc.yaml"
+  "mlflow-deployment/mlflow-rbac.yaml"
+  "mlflow-deployment/mlflow-deployment.yaml"
+  "mlflow-deployment/mlflow-service.yaml"
 )
 
 for manifest in "${MANIFESTS[@]}"; do
