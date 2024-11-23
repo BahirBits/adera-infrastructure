@@ -75,6 +75,12 @@ kubectl port-forward svc/mlflow-service 5000:5000 -n mlflow
 
 Then, open your browser and go to [http://localhost:5000](http://localhost:5000).
 
+## MLflow UI
+
+Below is a preview of the MLflow UI after successful deployment:
+
+![MLflow UI](mlflow_ui.png)
+
 ## Cleanup
 
 When you're done with the deployment, you can delete the namespace and resources:
