@@ -12,7 +12,6 @@ This guide provides the process to **build** and **deploy** **MLflow** on **Mini
 ## Step 1: Clone the Repository
 
 Clone the repository containing the deployment scripts and manifests:
-
 ```bash
 git clone <repository-url>
 cd adera-infrastructure/mlflow-deployment
@@ -23,7 +22,6 @@ First, create the Docker image for MLflow. Save the following script as `build.s
 
 ```bash
 #!/bin/bash
-
 set -e  # Exit immediately if a command exits with a non-zero status
 set -o pipefail  # Catch errors in pipelines
 
