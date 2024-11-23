@@ -7,7 +7,6 @@ password:
     name: redis-password
     key: password  # stored in Kubernetes secrets
 
-# Kubernetes resources
 resources:
   requests:
     memory: "128Mi"
