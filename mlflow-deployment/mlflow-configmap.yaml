@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: database-config
+  namespace: mlflow 
+data:
+  DB_HOST: postgres-postgresql.aderadb.svc.cluster.local
+  DB_PORT: "5432"  
+  DB_NAME: mlflow
