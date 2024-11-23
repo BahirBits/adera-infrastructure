@@ -1,0 +1,34 @@
+# PostgreSQL Deployment Configuration
+
+# Postgres Database Configuration
+postgresqlUsername: "postgres"
+postgresqlPassword:
+  secretKeyRef:
+    name: postgres-password
+    key: password  # stored in a Kubernetes secret for security
+postgresqlDatabase: "aderaengine_platform"
+postgresqlReplicationMode: "standard"  # Set to 'primary' for production-grade with replication
+persistence:
+  enabled: true
+  storageClass: "standard"
+  size: 4Gi 
+  mountPath: "/bitnami/postgresql/data" 
+# Kubernetes resources
+resources:
+  requests:
+    memory: "256Mi"  # Reduced memory request
+    cpu: "100m"
+  limits:
+    memory: "512Mi"  # Reduced memory limit
+    cpu: "500m"
+
+# Backup Configuration (Set up a backup strategy)
+postgresqlBackup:
+  enabled: true
+  schedule: "0 2 * * *"  # Back up every night at 2 AM
+  storageClass: "standard"
+  size: 1Gi
+
+# Use a secret for sensitive information
+usePassword: false
+postgresqlReplicas: 2  # Primary + 1 read replica

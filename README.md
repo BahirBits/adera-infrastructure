@@ -8,8 +8,8 @@ This repo provides a guide to **build** and **deploy** **MLflow** on **Minikube*
   - **MLOps Pipeline Setup**: To experiment with models and implement a local MLOps pipeline, you’ll need tools like MLflow, DVC, and/or Kubeflow. While Kubeflow is powerful, it can be resource-intensive for local development, and community support is limited. Therefore, MLflow is a more practical choice for local MLOps pipelines.
 
   - **Minikube for Local Kubernetes**: Minikube is a great tool for running Kubernetes locally. It simulates a Kubernetes environment on your local machine, assuming you have at least 4GB of RAM and a quad-core CPU.
-
-  - **PostgreSQL Setup**: You can easily deploy PostgreSQL on Minikube using Helm or by building your own Docker image. PostgreSQL will serve as the backend store for MLflow, providing an efficient solution for experiment tracking.
+  
+  - **PostgreSQL Setup**: You can easily deploy PostgreSQL on Minikube using Helm or by building your own Docker image. PostgreSQL will serve as the backend store for MLflow, providing an efficient solution for experiment tracking. You can refer to the `/postgres-redis-helm-deployment` directory for instructions on deploying PostgreSQL and Redis on your local Minikube setup.
 
   - **End-to-End Lightweight MLOps Pipeline**: This setup allows you to build a lightweight, end-to-end MLOps pipeline that tracks models, experiments, and results using MLflow.
 
