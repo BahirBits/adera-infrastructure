@@ -7,11 +7,17 @@ This guide provides the process to **build** and **deploy** **MLflow** on **Mini
 - **Minikube** installed and running.
 - **kubectl** installed and configured for Minikube.
 - **Docker** installed on your local machine.
-- **Helm** (optional for advanced configurations).
+- **postgresql** runing on minikube instance 
 
-## Step 1: Build and Push Docker Image
+## Step 1: Clone the Repository
 
-### a. Build the Docker Image
+Clone the repository containing the deployment scripts and manifests:
+
+```bash
+git clone <repository-url>
+cd adera-infrastructure/mlflow-deployment
+```
+## Step 2: Build and Push Docker Image
 
 First, create the Docker image for MLflow. Save the following script as `build.sh`:
 
