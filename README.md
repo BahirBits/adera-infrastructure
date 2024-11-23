@@ -1,6 +1,27 @@
 # MLflow Deployment on Local Minikube
+This repo provides a guide to **build** and **deploy** **MLflow** on **Minikube** using Kubernetes. Follow the steps below to set up your MLflow environment in local Minikube.
 
-This repo provides you guides the process to **build** and **deploy** **MLflow** on **Minikube** using Kubernetes. Follow the steps below to set up your  MLflow environment in local Minikube.
+## Objective
+
+- The goal of this setup is to enable model experimentation and implement a simple MLOps pipeline on your local machine. Here's what you can achieve with this setup:
+
+  - **MLOps Pipeline Setup**: To experiment with models and implement a local MLOps pipeline, you’ll need tools like MLflow, DVC, and/or Kubeflow. While Kubeflow is powerful, it can be resource-intensive for local development, and community support is limited. Therefore, MLflow is a more practical choice for local MLOps pipelines.
+
+  - **Minikube for Local Kubernetes**: Minikube is a great tool for running Kubernetes locally. It simulates a Kubernetes environment on your local machine, assuming you have at least 4GB of RAM and a quad-core CPU.
+
+  - **PostgreSQL Setup**: You can easily deploy PostgreSQL on Minikube using Helm or by building your own Docker image. PostgreSQL will serve as the backend store for MLflow, providing an efficient solution for experiment tracking.
+
+  - **End-to-End Lightweight MLOps Pipeline**: This setup allows you to build a lightweight, end-to-end MLOps pipeline that tracks models, experiments, and results using MLflow.
+
+  - **Storage Configuration**: For local development, configure MLflow's backend-store-uri to use PostgreSQL (or any SQL variant). The artifact store can be set up with a persistent volume or your local file system to store model artifacts.
+
+  - **MLflow Tracking & Model Registry**: While experimenting with your models, you can use MLflow's tracking server to log experiments and the model registry to manage models.
+
+  - **Replicability Across Environments**: This setup can easily be adapted to cloud-based Kubernetes environments, like AWS EKS or Google Cloud, with only minor configuration changes.
+
+## Why This Resource?
+
+While working with AWS EKS, I found it easy to scale my MLOps pipeline for production. For personal projects, I needed a lightweight, local solution that mirrors my cloud setup. Minikube offers a simple way to experiment with Kubernetes locally, and this setup can be easily migrated to cloud environments, making it suitable for both personal and professional use.
 
 ## Prerequisites
 - **Minikube** installed and running.
